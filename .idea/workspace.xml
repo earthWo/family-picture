@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whitelife_win.csr" beforeDir="false" afterPath="$PROJECT_DIR$/whitelife_win.csr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whitelife_win.key" beforeDir="false" afterPath="$PROJECT_DIR$/whitelife_win.key" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/db/db_connection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="330">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -147,9 +149,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="91" />
-    <option name="y" value="561" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="9" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -222,18 +224,18 @@
       <workItem from="1547433149396" duration="799000" />
       <workItem from="1547606475436" duration="5120000" />
       <workItem from="1547643042226" duration="396000" />
-      <workItem from="1548039952337" duration="2535000" />
+      <workItem from="1548039952337" duration="3214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39401000" />
+    <option name="totallyTimeSpent" value="40080000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="561" width="1440" height="805" extended-state="0" />
+    <frame x="9" y="23" width="1440" height="805" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19412607" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19412607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -251,7 +253,7 @@
       <window_info anchor="bottom" id="Weex Console" order="7" weight="0.32957748" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32678822" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32678822" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -441,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/db/db_connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
