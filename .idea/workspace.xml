@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/private.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitelife_win.csr" beforeDir="false" afterPath="$PROJECT_DIR$/whitelife_win.csr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitelife_win.key" beforeDir="false" afterPath="$PROJECT_DIR$/whitelife_win.key" afterDir="false" />
-    </list>
+    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -149,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="9" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
@@ -224,16 +220,15 @@
       <workItem from="1547433149396" duration="799000" />
       <workItem from="1547606475436" duration="5120000" />
       <workItem from="1547643042226" duration="396000" />
-      <workItem from="1548039952337" duration="3214000" />
+      <workItem from="1548039952337" duration="3221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40080000" />
+    <option name="totallyTimeSpent" value="40087000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="23" width="1440" height="805" extended-state="1" />
-    <editor active="true" />
+    <frame x="9" y="23" width="1440" height="805" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19412607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
