@@ -20,7 +20,7 @@ router.get('/groups', function (req, res, next) {
 /*
   获取我的照片组
  */
-router.post('/create', function (req, res, next) {
+router.get('/create', function (req, res, next) {
 
     let params = req.query;
 
@@ -44,7 +44,7 @@ router.post('/create', function (req, res, next) {
 });
 
 
-router.post('/delete', function (req, res, next) {
+router.get('/delete', function (req, res, next) {
 
     let params = req.query;
 
@@ -68,7 +68,7 @@ router.post('/delete', function (req, res, next) {
 });
 
 
-router.post('/mygroup', function (req, res, next) {
+router.get('/mygroup', function (req, res, next) {
 
     let params = req.query;
 

@@ -5,7 +5,7 @@ var response=require('../public/javascripts/response/response.js');
 var pictureDb=require('../public/javascripts/db/db_picture.js');
 
 /* GET users listing. */
-router.post('/add', function (req, res, next) {
+router.get('/add', function (req, res, next) {
 
     let params = req.query;
 
@@ -24,7 +24,7 @@ router.post('/add', function (req, res, next) {
 });
 
 
-router.post('/delete', function (req, res, next) {
+router.get('/delete', function (req, res, next) {
 
     let params = req.query;
 
@@ -42,7 +42,7 @@ router.post('/delete', function (req, res, next) {
 
 });
 
-router.post('/grouppictures', function (req, res, next) {
+router.get('/grouppictures', function (req, res, next) {
 
     let params = req.query;
 

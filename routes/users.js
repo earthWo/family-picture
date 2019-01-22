@@ -6,7 +6,7 @@ var response=require('../public/javascripts/response/response.js');
 const https = require('https');
 
 /* GET users listing. */
-router.post('/userlogin', function (req, res, next) {
+router.get('/userlogin', function (req, res, next) {
 
     let params = req.query;
 
@@ -30,7 +30,7 @@ router.post('/userlogin', function (req, res, next) {
 });
 
 
-router.post('/login', function (req, res, next) {
+router.get('/login', function (req, res, next) {
 
     let code = req.query.code;
 
