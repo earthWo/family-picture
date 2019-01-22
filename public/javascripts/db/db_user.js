@@ -10,6 +10,11 @@ var db=require('./db_connection.js');
     let userAvatar = params.userAvatar;
     let isRegister = params.isRegister;
 
+     let gender = params.isRegister;
+     let country = params.isRegister;
+     let province = params.province;
+     let city = params.city;
+
     let sql = "SELECT * FROM user where token = '"+token +"'";
 
     db.db_connection.query(sql,function (err, result) {
@@ -30,6 +35,10 @@ var db=require('./db_connection.js');
                 user.name = userName;
                 user.phone = userPhone;
                 user.avatar = userAvatar;
+                user.gender = gender;
+                user.country = country;
+                user.province = province;
+                user.city = city;
             }
 
 
@@ -37,6 +46,7 @@ var db=require('./db_connection.js');
         // 注册信息
 
             user.token = token;
+            user.createtime = Date.parse(new Date());
 
         }
 
@@ -53,28 +63,21 @@ var db=require('./db_connection.js');
     
     function addUser(user,isRegister,callback) {
         let sql;
-        console.log(user.id)
         if(user.id == undefined || user.id==null ){
 
             sql = " REPLACE INTO user (token,createtime) VALUES('"+user.token+"','"+user.createtime+"')";
 
         } else if( isRegister) {
 
-
-
-
             sql = " REPLACE INTO user (id,token,createtime) VALUES('"+user.id+"','"+user.token+"','"+user.createtime+"')";
-
-
-
 
         }else {
 
-            sql = " REPLACE INTO user (id,name,phone,avatar,token,createtime) VALUES('"+user.id+"','"+user.name+"','"+user.phone+"','"+user.avatar
-                +"','"+user.token+"','"+user.createtime+"')";
+            sql = " REPLACE INTO user (id,name,phone,avatar,token,createtime,gender,country,province,city) VALUES('"+user.id+"','"+user.name+"','"+user.phone+"','"+user.avatar
+                +"','"+user.token+"','"+user.createtime+"','"+user.gender+"','"+user.country+"','"+user.province+"','"+user.city+"')";
 
         }
-        console.log(sql);
+
 
         db.db_connection.query(sql,function (err, result) {
             if(err){
