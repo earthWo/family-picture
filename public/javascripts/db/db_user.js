@@ -31,7 +31,7 @@ var db=require('./db_connection.js');
             user = result[0];
 
 
-            if( isRegister == '1'){
+            if( isRegister != '1'){
 
                 user.name = userName;
                 user.phone = userPhone;
