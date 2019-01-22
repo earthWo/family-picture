@@ -54,7 +54,7 @@ router.get('/login', function (req, res, next) {
                 let openid=data.openid;
                 let token = hash.update(Buffer.from(openid)).digest('hex')
 
-                let params = {token:token,isRegister:1};
+                let params = {token:token,isRegister:'1'};
 
                 userDb.login(params,{
 

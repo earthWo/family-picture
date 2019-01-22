@@ -31,7 +31,7 @@ var db=require('./db_connection.js');
             user = result[0];
 
 
-            if( isRegister == 1){
+            if( isRegister == '1'){
 
                 user.name = userName;
                 user.phone = userPhone;
@@ -68,7 +68,7 @@ var db=require('./db_connection.js');
 
             sql = " REPLACE INTO user (token,createtime) VALUES('"+user.token+"','"+user.createtime+"')";
 
-        } else if( isRegister == 1) {
+        } else if( isRegister == '1') {
 
             sql = " REPLACE INTO user (id,token,createtime) VALUES('"+user.id+"','"+user.token+"','"+user.createtime+"')";
 
