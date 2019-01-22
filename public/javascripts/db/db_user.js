@@ -8,6 +8,7 @@ var db=require('./db_connection.js');
     let userName = params.userName;
     let userPhone = params.userPhone;
     let userAvatar = params.userAvatar;
+    let isRegister = params.isRegister;
 
     let sql = "SELECT * FROM user where token = '"+token +"'";
 
@@ -24,23 +25,22 @@ var db=require('./db_connection.js');
 
             user = result[0];
 
-            user.name = userName;
-            user.phone = userPhone;
-            user.avatar = userAvatar;
+
+            if( !isRegister){
+                user.name = userName;
+                user.phone = userPhone;
+                user.avatar = userAvatar;
+            }
+
 
         }else{
         // 注册信息
 
-
             user.token = token;
-            user.name = userName;
-            user.phone = userPhone;
-            user.avatar = userAvatar;
-            user.createtime = "131321321";
 
         }
 
-        addUser(user,callback);
+        addUser(user,isRegister,callback);
 
 
 
@@ -51,14 +51,14 @@ var db=require('./db_connection.js');
     
 
     
-    function addUser(user,callback) {
+    function addUser(user,isRegister,callback) {
         let sql;
-        if(user.id ==null ){
+        console.log(user.id)
+        if(user.id == undefined ||isRegister ){
 
-            sql = " REPLACE INTO user (name,phone,avatar,token,createtime) VALUES('"+user.name+"','"+user.phone+"','"+user.avatar
-        +"','"+user.token+"','"+user.createtime+"')";
+            sql = " REPLACE INTO user (token,createtime) VALUES('"+user.token+"','"+user.createtime+"')";
 
-        }else{
+        } else {
 
             sql = " REPLACE INTO user (id,name,phone,avatar,token,createtime) VALUES('"+user.id+"','"+user.name+"','"+user.phone+"','"+user.avatar
                 +"','"+user.token+"','"+user.createtime+"')";

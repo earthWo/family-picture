@@ -47,7 +47,30 @@ router.get('/login', function (req, res, next) {
                 res.json(error.error(data.errmsg))
             }else{
                 console.log("成功");
-                res.json(response.response(data))
+
+                const crypto = require('crypto')
+
+                const hash = crypto.createHash('md5')
+                let openid=data.openid;
+                let token = hash.update(Buffer.from(openid)).digest('hex')
+
+                let params = {token:token,isRegister:true};
+
+                userDb.login(params,{
+
+                    success:user=> {
+
+                        res.json(response.response(user))
+
+                    },
+
+
+                    error: ()=> {
+                        res.json(error.error("登录失败"))
+                    }
+
+
+                });
             }
         });
 
