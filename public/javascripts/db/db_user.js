@@ -54,11 +54,21 @@ var db=require('./db_connection.js');
     function addUser(user,isRegister,callback) {
         let sql;
         console.log(user.id)
-        if(user.id == undefined ||isRegister ){
+        if(user.id == undefined || user.id==null ){
 
             sql = " REPLACE INTO user (token,createtime) VALUES('"+user.token+"','"+user.createtime+"')";
 
-        } else {
+        } else if( isRegister) {
+
+
+
+
+            sql = " REPLACE INTO user (id,token,createtime) VALUES('"+user.id+"','"+user.token+"','"+user.createtime+"')";
+
+
+
+
+        }else {
 
             sql = " REPLACE INTO user (id,name,phone,avatar,token,createtime) VALUES('"+user.id+"','"+user.name+"','"+user.phone+"','"+user.avatar
                 +"','"+user.token+"','"+user.createtime+"')";
