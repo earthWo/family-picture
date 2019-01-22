@@ -10,8 +10,8 @@ var db=require('./db_connection.js');
     let userAvatar = params.userAvatar;
     let isRegister = params.isRegister;
 
-     let gender = params.isRegister;
-     let country = params.isRegister;
+     let gender = params.gender;
+     let country = params.country;
      let province = params.province;
      let city = params.city;
 
@@ -31,7 +31,8 @@ var db=require('./db_connection.js');
             user = result[0];
 
 
-            if( !isRegister){
+            if( isRegister == 1){
+
                 user.name = userName;
                 user.phone = userPhone;
                 user.avatar = userAvatar;
@@ -67,7 +68,7 @@ var db=require('./db_connection.js');
 
             sql = " REPLACE INTO user (token,createtime) VALUES('"+user.token+"','"+user.createtime+"')";
 
-        } else if( isRegister) {
+        } else if( isRegister == 1) {
 
             sql = " REPLACE INTO user (id,token,createtime) VALUES('"+user.id+"','"+user.token+"','"+user.createtime+"')";
 
@@ -78,6 +79,7 @@ var db=require('./db_connection.js');
 
         }
 
+        console.log(isRegister)
 
         db.db_connection.query(sql,function (err, result) {
             if(err){
