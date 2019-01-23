@@ -76,6 +76,7 @@ router.get('/picturetoken', function (req, res, next) {
     let options = {
         scope: bucket
     };
+
     let putPolicy = new qiniu.rs.PutPolicy(options);
     let mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
     let uploadToken=putPolicy.uploadToken(mac);
