@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="" />
+    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/routes/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/picture.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/picture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="309">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -167,15 +169,16 @@
       <workItem from="1548039952337" duration="4486000" />
       <workItem from="1548125037817" duration="8392000" />
       <workItem from="1548209874402" duration="2317000" />
-      <workItem from="1548227000196" duration="1139000" />
+      <workItem from="1548227000196" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53200000" />
+    <option name="totallyTimeSpent" value="53350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1851" y="23" width="1440" height="993" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20272206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -187,7 +190,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23196448" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23196448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -195,9 +198,9 @@
       <window_info anchor="bottom" id="Weex Console" order="7" weight="0.32741398" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35516092" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35516092" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32963374" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -400,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/picture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="309">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
         </state>
       </provider>
     </entry>

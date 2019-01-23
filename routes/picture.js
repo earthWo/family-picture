@@ -70,7 +70,6 @@ router.get('/grouppictures', function (req, res, next) {
   获取全部照片组
  */
 router.get('/picturetoken', function (req, res, next) {
-    console.log("开始")
     let accessKey = 'V8aIn8cL3-RdhtxlLWiBevtRb4kIY9M2rwKCYEsW';
     let secretKey = 'OgrvmgrHqxilXJ280Izute5pLB_h1Vg1CjaH2JSg';
     let bucket = 'family-picture';
@@ -78,10 +77,8 @@ router.get('/picturetoken', function (req, res, next) {
         scope: bucket
     };
     let putPolicy = new qiniu.rs.PutPolicy(options);
-    console.log("1")
     let mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
     let uploadToken=putPolicy.uploadToken(mac);
-    console.log("2")
     res.json(response.response(uploadToken))
 
 });
