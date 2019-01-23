@@ -53,9 +53,28 @@ function pictureByGroup(gid,callback) {
 
 }
 
+
+function pictureByUser(uid,callback) {
+
+    let sql = "select * from picture where uid="+uid;
+
+    db.db_connection.query(sql,function (err, result) {
+        if(err){
+            console.log(err);
+            callback.error();
+            return;
+        }
+
+        callback.success(result);
+
+    });
+
+}
+
 module.exports={
     addPicture,
     deletePicture,
-    pictureByGroup
+    pictureByGroup,
+    pictureByUser
 }
 

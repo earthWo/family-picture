@@ -66,6 +66,26 @@ router.get('/grouppictures', function (req, res, next) {
 
 });
 
+
+
+router.get('/userpictures', function (req, res, next) {
+
+    let params = req.query;
+
+    pictureDb.pictureByUser(params.uid,{
+
+        success:pictures=> {
+            res.json(response.response(pictures))
+        },
+
+        error: ()=> {
+            res.json(error.error("删除图片失败"))
+        }
+
+    });
+
+});
+
 /*
   获取全部照片组
  */
