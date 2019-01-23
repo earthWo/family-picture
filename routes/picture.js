@@ -3,6 +3,12 @@ var router = express.Router();
 var error=require('../public/javascripts/response/error.js');
 var response=require('../public/javascripts/response/response.js');
 var pictureDb=require('../public/javascripts/db/db_picture.js');
+var qiniu = require("qiniu");
+
+
+//需要填写你的 Access Key 和 Secret Key
+qiniu.conf.ACCESS_KEY = 'V8aIn8cL3-RdhtxlLWiBevtRb4kIY9M2rwKCYEsW';
+qiniu.conf.SECRET_KEY = 'OgrvmgrHqxilXJ280Izute5pLB_h1Vg1CjaH2JSg';
 
 /* GET users listing. */
 router.get('/add', function (req, res, next) {
@@ -59,5 +65,24 @@ router.get('/grouppictures', function (req, res, next) {
     });
 
 });
+
+/*
+  获取全部照片组
+ */
+router.get('/picturetoken', function (req, res, next) {
+
+    let accessKey = 'V8aIn8cL3-RdhtxlLWiBevtRb4kIY9M2rwKCYEsW';
+    let secretKey = 'OgrvmgrHqxilXJ280Izute5pLB_h1Vg1CjaH2JSg';
+    let bucket = 'family-picture';
+    let options = {
+        scope: bucket
+    };
+    let putPolicy = new qiniu.rs.PutPolicy(options);
+    let mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
+    let uploadToken=putPolicy.uploadToken(mac);
+    res.json(response.response(uploadToken))
+
+});
+
 
 module.exports = router;

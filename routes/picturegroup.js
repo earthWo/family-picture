@@ -5,15 +5,6 @@ var response=require('../public/javascripts/response/response.js');
 var groupDb=require('../public/javascripts/db/db_group.js');
 
 /* GET picture group. */
-/*
-  获取全部照片组
- */
-router.get('/groups', function (req, res, next) {
-
-
-    res.send(req.query);
-
-});
 
 
 

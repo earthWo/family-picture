@@ -4,7 +4,7 @@ var relationship=require('./db_relationship.js');
 
 function createGroup(userId,name,callback) {
 
-   let sql = " REPLACE INTO picturegroup ( name ) VALUES('"+name+"')";
+   let sql = " REPLACE INTO picturegroup (name) VALUES('"+name+"')";
     console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
