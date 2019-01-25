@@ -1,9 +1,27 @@
 var db=require('./db_connection.js');
 
 
-function addPicture(uid,url,gid,callback) {
+function addPicture(uid,url,callback) {
 
-    let sql = "REPLACE INTO picture ( uid,gid,url,createtime ) VALUES('"+uid+"','"+gid+"','"+url+"','"+'2012/12/21'+"')";
+    let currenttime=Date.parse(new Date());
+    let sql = "REPLACE INTO picture ( uid,url,createtime ) VALUES('"+uid+"','"+url+"','"+currenttime+"')";
+    console.log(sql);
+    db.db_connection.query(sql,function (err, result) {
+        if(err){
+            console.log(err);
+            callback.error();
+            return;
+        }
+
+        callback.success({"msg":"添加图片成功"});
+
+    });
+
+}
+
+
+function addGroupPicture(pid,gid,callback) {
+    let sql = "REPLACE INTO picture_group_rel ( pid,gid ) VALUES('"+pid+"','"+gid+"')";
     console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
@@ -75,6 +93,7 @@ module.exports={
     addPicture,
     deletePicture,
     pictureByGroup,
-    pictureByUser
+    pictureByUser,
+    addGroupPicture
 }
 

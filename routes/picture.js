@@ -15,7 +15,25 @@ router.get('/add', function (req, res, next) {
 
     let params = req.query;
 
-    pictureDb.addPicture(params.uid,params.url,params.gid,{
+    pictureDb.addPicture(params.uid,params.url,{
+
+        success:msg=> {
+            res.json(response.response(msg))
+        },
+
+        error: ()=> {
+            res.json(error.error("添加图片失败"))
+        }
+
+    });
+
+});
+
+router.get('/addGroupPicture', function (req, res, next) {
+
+    let params = req.query;
+
+    pictureDb.addGroupPicture(params.pid,params.gid,{
 
         success:msg=> {
             res.json(response.response(msg))
