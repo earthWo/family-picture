@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/picture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="50" column="19" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="307">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/db/db_picture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+            <state relative-caret-position="153">
+              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -55,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/picturegroup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="-753">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
@@ -116,14 +116,14 @@
         <option value="$PROJECT_DIR$/public/javascripts/db/db_user.js" />
         <option value="$PROJECT_DIR$/public/javascripts/db/db_group.js" />
         <option value="$PROJECT_DIR$/routes/picturegroup.js" />
-        <option value="$PROJECT_DIR$/routes/picture.js" />
         <option value="$PROJECT_DIR$/public/javascripts/db/db_picture.js" />
+        <option value="$PROJECT_DIR$/routes/picture.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
+    <option name="x" value="-1806" />
+    <option name="y" value="129" />
     <option name="width" value="1440" />
     <option name="height" value="802" />
   </component>
@@ -234,15 +234,15 @@
       <workItem from="1548125037817" duration="8392000" />
       <workItem from="1548209874402" duration="2317000" />
       <workItem from="1548227000196" duration="3610000" />
-      <workItem from="1548396514685" duration="5438000" />
+      <workItem from="1548396514685" duration="6240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61109000" />
+    <option name="totallyTimeSpent" value="61911000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1440" height="802" extended-state="0" />
+    <frame x="-1806" y="129" width="1440" height="802" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20558739" />
@@ -255,7 +255,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23098591" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23098591" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39859155" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -263,7 +263,7 @@
       <window_info anchor="bottom" id="Weex Console" order="7" weight="0.32741398" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.45070422" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2859155" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32963374" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
@@ -454,22 +454,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/picturegroup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="-753">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/picture.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="50" column="19" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/db/db_picture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        <state relative-caret-position="153">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/picture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>

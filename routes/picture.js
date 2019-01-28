@@ -70,7 +70,7 @@ router.get('/groupDeletePicture', function (req, res, next) {
 
     let params = req.query;
 
-    pictureDb.deleteGroupPicture(params.id,{
+    pictureDb.deleteGroupPicture(params.pid,params.gid,{
 
         success:msg=> {
             res.json(response.response(msg))
