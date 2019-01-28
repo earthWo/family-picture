@@ -13,7 +13,7 @@ function addPicture(uid,url,callback) {
             return;
         }
 
-        callback.success({"msg":"添加图片成功"});
+        callback.success({"msg":"添加图片成功","id":result.insertId});
 
     });
 
