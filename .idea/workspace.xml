@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/javascripts/db/db_picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/db/db_picture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/picture.js" afterDir="false" />
-    </list>
+    <list default="true" id="05622686-2f1a-4e75-a248-ec66addeea92" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/picture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="97">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -122,8 +119,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1806" />
-    <option name="y" value="129" />
+    <option name="x" value="-1500" />
+    <option name="y" value="44" />
     <option name="width" value="1440" />
     <option name="height" value="802" />
   </component>
@@ -234,15 +231,15 @@
       <workItem from="1548125037817" duration="8392000" />
       <workItem from="1548209874402" duration="2317000" />
       <workItem from="1548227000196" duration="3610000" />
-      <workItem from="1548396514685" duration="6240000" />
+      <workItem from="1548396514685" duration="6775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61911000" />
+    <option name="totallyTimeSpent" value="62446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1806" y="129" width="1440" height="802" extended-state="0" />
+    <frame x="-1250" y="58" width="1440" height="802" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20558739" />
@@ -255,7 +252,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23098591" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23098591" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39859155" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -263,7 +260,7 @@
       <window_info anchor="bottom" id="Weex Console" order="7" weight="0.32741398" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2859155" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2859155" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32963374" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
@@ -468,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/picture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="97">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
