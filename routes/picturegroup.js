@@ -39,7 +39,7 @@ router.get('/delete', function (req, res, next) {
 
     let params = req.query;
 
-    groupDb.deleteGroup(params.uid,params.gid,{
+    groupDb.deleteGroup(params.gid,params.self,{
 
         success:id=> {
 

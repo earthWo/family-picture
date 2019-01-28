@@ -22,20 +22,74 @@ function createGroup(userId,name,callback) {
 }
 
 
-function deleteGroup(uid,gid,callback){
-    let sql = " delete from picturegroup where id="+gid;
-    console.log(sql);
-    db.db_connection.query(sql,function (err, result) {
+function deleteGroup(gid,self,callback){
+    let sql1 = "delete from picturegroup where id =?";
+    let sql2 = "delete from picture_group_rel where  picture_group_rel.gid=?";
+    let sql3 = "delete from relationship where gid =?";
+    db.db_connection.beginTransaction(function (err) {
+
         if(err){
-            console.log(err);
             callback.error();
-            return;
+        }else{
+            db.db_connection.query(sql3,gid,function (err, result) {
+                if(err){
+                    db.db_connection.rollback(function () {
+                        console.log(err);
+                        callback.error();
+                    })
+                    return;
+                }else if(self){
+                    db.db_connection.query(sql2,gid,function (err, result) {
+                        if(err){
+                            db.db_connection.rollback(function () {
+                                console.log(err);
+                                callback.error();
+                            })
+                            return;
+                        }else{
+
+                            db.db_connection.query(sql1,gid,function (err, result) {
+                                if(err){
+                                    db.db_connection.rollback(function () {
+                                        console.log(err);
+                                        callback.error();
+                                    })
+                                    return;
+                                }else{
+
+                                    db.db_connection.commit(function(err) {
+                                        if (err) {
+                                            return db.db_connection.rollback(function() {
+                                                console.log(err);
+                                                callback.error();
+                                            });
+                                        }
+                                        callback.success({"msg":'删除成功'});
+                                    });
+
+
+                                }
+                            });
+
+
+                        }
+                    });
+                }else{
+                    db.db_connection.commit(function(err) {
+                        if (err) {
+                            return db.db_connection.rollback(function() {
+                                console.log(err);
+                                callback.error();
+                            });
+                        }
+                        callback.success({"msg":'删除成功'});
+                    });
+                }
+
+            });
         }
-        callback.success(gid);
-        relationship.deleteRelationship(uid,gid);
 
-
-    });
+    })
 }
 
 
