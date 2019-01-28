@@ -56,7 +56,7 @@ function deletePicture(id,callback) {
 
 function pictureByGroup(gid,callback) {
 
-    let sql = "select * from picture where gid="+gid;
+    let sql = "select picture.* from picture,picture_group_rel where picture_group_rel.gid= "+gid+" and picture_group_rel.pid = picture.id";
 
     db.db_connection.query(sql,function (err, result) {
         if(err){

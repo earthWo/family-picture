@@ -77,7 +77,7 @@ router.get('/grouppictures', function (req, res, next) {
         },
 
         error: ()=> {
-            res.json(error.error("删除图片失败"))
+            res.json(error.error("获取图片失败"))
         }
 
     });
