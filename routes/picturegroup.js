@@ -106,4 +106,28 @@ router.get('/hasGroup', function (req, res, next) {
 
 });
 
+
+router.get('/joinGroup', function (req, res, next) {
+
+    let params = req.query;
+
+    groupDb.joinGroup(params.uid,params.gid,{
+
+        success:groups=> {
+
+            res.json(response.response(groups))
+
+        },
+
+
+        error: ()=> {
+            res.json(error.error("获取群组失败"))
+        }
+
+
+    });
+
+
+});
+
 module.exports = router;

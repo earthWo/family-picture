@@ -121,11 +121,18 @@ function hasGroup(uid,gid,callback){
     });
 }
 
+function joinGroup(uid,gid,callback) {
+
+    relationship.createRelationship(uid,gid,callback);
+
+}
+
 module.exports={
     createGroup,
     deleteGroup,
     myGroup,
-    hasGroup
+    hasGroup,
+    joinGroup
 }
 
 
