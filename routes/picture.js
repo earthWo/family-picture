@@ -66,6 +66,24 @@ router.get('/delete', function (req, res, next) {
 
 });
 
+router.get('/groupDeletePicture', function (req, res, next) {
+
+    let params = req.query;
+
+    pictureDb.deleteGroupPicture(params.id,{
+
+        success:msg=> {
+            res.json(response.response(msg))
+        },
+
+        error: ()=> {
+            res.json(error.error("删除图片失败"))
+        }
+
+    });
+
+});
+
 router.get('/grouppictures', function (req, res, next) {
 
     let params = req.query;

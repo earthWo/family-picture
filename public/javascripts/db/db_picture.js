@@ -38,7 +38,56 @@ function addGroupPicture(pid,gid,callback) {
 
 function deletePicture(id,callback) {
 
-    let sql = "delete from picture where id="+id;
+    let sql1 = "delete from picture where  picture.id=?";
+    let sql2 = "delete from picture_group_rel where  picture_group_rel.pid=?";
+    db.db_connection.beginTransaction(function (err) {
+
+        if(err){
+            callback.error();
+        }else{
+            db.db_connection.query(sql1,id,function (err, result) {
+                if(err){
+                    db.db_connection.rollback(function () {
+                        console.log(err);
+                        callback.error();
+                    })
+                    return;
+                }else{
+                    db.db_connection.query(sql2,id,function (err, result) {
+                        if(err){
+                            db.db_connection.rollback(function () {
+                                console.log(err);
+                                callback.error();
+                            })
+                            return;
+                        }else{
+
+                            db.db_connection.commit(function(err) {
+                                if (err) {
+                                    return db.db_connection.rollback(function() {
+                                        console.log(err);
+                                        callback.error();
+                                    });
+                                }
+                                callback.success({"msg":'删除成功'});
+                            });
+
+
+                        }
+                    });
+                }
+
+            });
+        }
+        
+    })
+
+
+}
+
+function deleteGroupPicture(id,callback) {
+
+    let sql = "delete from picture_group_rel  where picture_group_rel.id = "+id+";";
     console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
@@ -72,6 +121,8 @@ function pictureByGroup(gid,callback) {
 }
 
 
+
+
 function pictureByUser(uid,callback) {
 
     let sql = "select * from picture where uid="+uid;
@@ -94,6 +145,7 @@ module.exports={
     deletePicture,
     pictureByGroup,
     pictureByUser,
-    addGroupPicture
+    addGroupPicture,
+    deleteGroupPicture
 }
 
