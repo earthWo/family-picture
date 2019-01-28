@@ -107,10 +107,25 @@ function myGroup(uid,callback){
     });
 }
 
+function hasGroup(uid,gid,callback){
+    let sql = "select * from relationship where uid =? and gid= '"+gid+"'";
+    console.log(sql);
+    db.db_connection.query(sql,uid,function (err, result) {
+        if(err){
+            console.log(err);
+            callback.error();
+            return;
+        }
+        callback.success(result);
+
+    });
+}
+
 module.exports={
     createGroup,
     deleteGroup,
-    myGroup
+    myGroup,
+    hasGroup
 }
 
 
