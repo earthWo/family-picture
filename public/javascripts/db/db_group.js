@@ -3,8 +3,8 @@ var relationship=require('./db_relationship.js');
 
 
 function createGroup(userId,name,callback) {
-
-   let sql = " REPLACE INTO picturegroup (name) VALUES('"+name+"')";
+    let currenttime=Date.parse(new Date());
+   let sql = " REPLACE INTO picturegroup (name,uid,createtime) VALUES('"+name+"','"+userId+"','"+currenttime+"')";
     console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
@@ -94,7 +94,7 @@ function deleteGroup(gid,self,callback){
 
 
 function myGroup(uid,callback){
-    let sql = " select picturegroup.*,relationship.uid from picturegroup,relationship where relationship.gid = picturegroup.id && relationship.uid="+uid;
+    let sql = " select picturegroup.* from picturegroup,relationship where relationship.gid = picturegroup.id && relationship.uid="+uid;
     console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
