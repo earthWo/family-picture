@@ -26,6 +26,7 @@ function deleteGroup(gid,self,callback){
     let sql1 = "delete from picturegroup where id =?";
     let sql2 = "delete from picture_group_rel where  picture_group_rel.gid=?";
     let sql3 = "delete from relationship where gid =?";
+
     db.db_connection.beginTransaction(function (err) {
 
         if(err){
@@ -38,7 +39,7 @@ function deleteGroup(gid,self,callback){
                         callback.error();
                     })
                     return;
-                }else if(self){
+                }else if(self==true){
                     db.db_connection.query(sql2,gid,function (err, result) {
                         if(err){
                             db.db_connection.rollback(function () {
