@@ -39,7 +39,7 @@ function deleteGroup(gid,self,callback){
                         callback.error();
                     })
                     return;
-                }else if(self==true){
+                }else if(self=='true'){
                     db.db_connection.query(sql2,gid,function (err, result) {
                         if(err){
                             db.db_connection.rollback(function () {
