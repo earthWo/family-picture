@@ -95,9 +95,9 @@ function deleteGroup(gid,self,callback){
 
 
 function myGroup(uid,callback){
-    let sql = " select picturegroup.* from picturegroup,relationship where relationship.gid = picturegroup.id && relationship.uid="+uid;
-    console.log(sql);
-    db.db_connection.query(sql,function (err, result) {
+    let sql = "select pg.* ,COUNT(pgl.id) AS picturecount from (select p.*,count(rel.id) as usercount  from (select picturegroup.* from picturegroup, relationship where relationship.gid = picturegroup.id && relationship.uid=? )p LEFT JOIN (select * from relationship)rel on rel.gid=p.id GROUP BY p.id) pg left join (select * from picture_group_rel" +
+        ")pgl on pgl.gid=pg.id group by pg.id ORDER BY pg.updatetime DESC";
+    db.db_connection.query(sql,uid,function (err, result) {
         if(err){
             console.log(err);
             callback.error();
@@ -110,7 +110,6 @@ function myGroup(uid,callback){
 
 function hasGroup(uid,gid,callback){
     let sql = "select * from relationship where uid =? and gid= '"+gid+"'";
-    console.log(sql);
     db.db_connection.query(sql,uid,function (err, result) {
         if(err){
             console.log(err);
@@ -128,12 +127,29 @@ function joinGroup(uid,gid,callback) {
 
 }
 
+function groupUsers(gid,callback) {
+
+    let sql = "select user.* from user,relationship where user.id = relationship.uid  and relationship.gid= '"+gid+"'";
+    console.log(sql);
+    db.db_connection.query(sql,function (err, result) {
+        if(err){
+            console.log(err);
+            callback.error();
+            return;
+        }
+        callback.success(result);
+
+    });
+
+}
+
 module.exports={
     createGroup,
     deleteGroup,
     myGroup,
     hasGroup,
-    joinGroup
+    joinGroup,
+    groupUsers
 }
 
 

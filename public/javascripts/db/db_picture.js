@@ -22,7 +22,6 @@ function addPicture(uid,url,callback) {
 
 function addGroupPicture(pid,gid,callback) {
     let sql = "REPLACE INTO picture_group_rel ( pid,gid ) VALUES('"+pid+"','"+gid+"')";
-    console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
             console.log(err);
@@ -103,9 +102,14 @@ function deleteGroupPicture(pid,gid,callback) {
 }
 
 
-function pictureByGroup(gid,callback) {
+function pictureByGroup(gid,page,pageSize,callback) {
 
-    let sql = "select picture.* from picture,picture_group_rel where picture_group_rel.gid= "+gid+" and picture_group_rel.pid = picture.id";
+    if(page==undefined){
+        page=1;
+    }
+
+
+    let sql = "select picture.* from picture,picture_group_rel where picture_group_rel.gid= "+gid+" and picture_group_rel.pid = picture.id order by createtime  limit "+ (page-1)*pageSize+","+pageSize ;;
 
     db.db_connection.query(sql,function (err, result) {
         if(err){
@@ -123,19 +127,23 @@ function pictureByGroup(gid,callback) {
 
 
 
-function pictureByUser(uid,callback) {
+function pictureByUser(uid,page,pageSize,callback) {
 
-    let sql = "select * from picture where uid="+uid;
+    if(page==undefined){
+        page=1;
+    }
 
+    let sql = "select * from picture where uid="+uid +" order by createtime desc limit "+ (page-1)*pageSize+","+pageSize ;
+
+    console.log(sql);
     db.db_connection.query(sql,function (err, result) {
         if(err){
             console.log(err);
             callback.error();
             return;
+        }else{
+            callback.success(result);
         }
-
-        callback.success(result);
-
     });
 
 }

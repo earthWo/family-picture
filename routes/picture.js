@@ -1,14 +1,18 @@
-var express = require('express');
-var router = express.Router();
-var error=require('../public/javascripts/response/error.js');
-var response=require('../public/javascripts/response/response.js');
-var pictureDb=require('../public/javascripts/db/db_picture.js');
-var qiniu = require("qiniu");
+const express = require('express');
+const router = express.Router();
+const error=require('../public/javascripts/response/error.js');
+const response=require('../public/javascripts/response/response.js');
+const listresponse=require('../public/javascripts/response/listresponse.js');
+const pictureDb=require('../public/javascripts/db/db_picture.js');
+const qiniu = require("qiniu");
 
 
 //需要填写你的 Access Key 和 Secret Key
 qiniu.conf.ACCESS_KEY = 'V8aIn8cL3-RdhtxlLWiBevtRb4kIY9M2rwKCYEsW';
 qiniu.conf.SECRET_KEY = 'OgrvmgrHqxilXJ280Izute5pLB_h1Vg1CjaH2JSg';
+
+
+var pageSize=15;
 
 /* GET users listing. */
 router.get('/add', function (req, res, next) {
@@ -88,10 +92,10 @@ router.get('/grouppictures', function (req, res, next) {
 
     let params = req.query;
 
-    pictureDb.pictureByGroup(params.gid,{
+    pictureDb.pictureByGroup(params.gid,params.page,pageSize,{
 
         success:pictures=> {
-            res.json(response.response(pictures))
+            res.json(listresponse.response(pictures,pageSize));
         },
 
         error: ()=> {
@@ -108,14 +112,14 @@ router.get('/userpictures', function (req, res, next) {
 
     let params = req.query;
 
-    pictureDb.pictureByUser(params.uid,{
+    pictureDb.pictureByUser(params.uid,params.page,pageSize,{
 
         success:pictures=> {
-            res.json(response.response(pictures))
+            res.json(listresponse.response(pictures,pageSize));
         },
 
         error: ()=> {
-            res.json(error.error("删除图片失败"))
+            res.json(error.error("获取图片失败"))
         }
 
     });
