@@ -96,7 +96,7 @@ function deleteGroup(gid,self,callback){
 
 function myGroup(uid,callback){
     let sql = "select pg.* ,COUNT(pgl.id) AS picturecount from (select p.*,count(rel.id) as usercount  from (select picturegroup.* from picturegroup, relationship where relationship.gid = picturegroup.id && relationship.uid=? )p LEFT JOIN (select * from relationship)rel on rel.gid=p.id GROUP BY p.id) pg left join (select * from picture_group_rel" +
-        ")pgl on pgl.gid=pg.id group by pg.id ORDER BY pg.updatetime DESC";
+        ") pgl on pgl.gid=pg.id group by pg.id ORDER BY pg.updatetime DESC";
     db.db_connection.query(sql,uid,function (err, result) {
         if(err){
             console.log(err);
