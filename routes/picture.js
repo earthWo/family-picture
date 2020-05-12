@@ -12,7 +12,7 @@ qiniu.conf.ACCESS_KEY = 'V8aIn8cL3-RdhtxlLWiBevtRb4kIY9M2rwKCYEsW';
 qiniu.conf.SECRET_KEY = 'OgrvmgrHqxilXJ280Izute5pLB_h1Vg1CjaH2JSg';
 
 
-var pageSize=15;
+var pageSize = 100;
 
 /* GET users listing. */
 router.get('/add', function (req, res, next) {
