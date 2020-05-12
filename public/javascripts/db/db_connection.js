@@ -4,7 +4,7 @@ var mysql=require('mysql')
 //连接数据库
 const db_connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'root',
+    user     : 'alicealone',
     password : '071235!Wuzefeng',
     database : 'family_picture'
 });

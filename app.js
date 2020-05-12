@@ -43,7 +43,6 @@ app.use(function(err, req, res, next) {
 
 //监听端口
 var server = app.listen(8081, function () {
-
     console.log('开始服务');
     db.connect();
 })
